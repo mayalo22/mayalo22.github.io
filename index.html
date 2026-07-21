@@ -20,6 +20,7 @@
     </a>
     <nav aria-label="ניווט ראשי">
       <a href="#books">הספרים</a>
+      <a href="#direct-shop">רכישה ישירה</a>
       <a href="#social">מה חדש</a>
       <a href="#community">הקהילה</a>
     </nav>
@@ -58,6 +59,22 @@
       </div>
       <div id="books-list" class="books-list" aria-live="polite"></div>
       <p class="price-note" id="price-status">טוען מחירים עדכניים…</p>
+    </section>
+
+    <section class="direct-shop-section" id="direct-shop">
+      <div class="direct-shop-copy reveal">
+        <p class="eyebrow">ישירות ממני אליכן</p>
+        <h2>בחרו ספר אחד,<br>כמה ספרים או את כולם</h2>
+        <p>כל ספר מודפס עולה 50 ₪. משלוח בעלות 25 ₪ מחושב פעם אחת בלבד לכל ההזמנה, גם כשמזמינים כמה ספרים יחד.</p>
+        <ul>
+          <li>בוחרים את הספרים</li>
+          <li>ממלאים שם, כתובת וטלפון</li>
+          <li>מקבלים מספר אישור הזמנה</li>
+          <li>משלמים ב־Bit או PayBox</li>
+        </ul>
+        <button class="button button-primary direct-shop-button" type="button" data-open-direct-shop>להזמנה ישירה ממני</button>
+      </div>
+      <div class="direct-shop-books reveal" id="direct-shop-books" aria-label="הספרים הזמינים לרכישה ישירה"></div>
     </section>
 
     <section class="game-section" id="game">
@@ -108,24 +125,31 @@
     <button class="dialog-close" type="button" data-close-order aria-label="סגירת חלון ההזמנה">×</button>
     <div class="order-dialog-inner">
       <p class="eyebrow">רכישה ישירה מהסופרת</p>
-      <h2 id="order-dialog-title">הזמנת ספר מודפס</h2>
-      <div class="order-summary" aria-live="polite">
-        <strong id="order-book-title"></strong>
-        <span>ספר: 50 ₪ · משלוח: 25 ₪</span>
-        <b>סה״כ לתשלום: 75 ₪</b>
-      </div>
+      <h2 id="order-dialog-title">הזמנת ספרים מודפסים</h2>
 
       <form id="direct-order-form">
+        <fieldset class="order-books-fieldset">
+          <legend>אילו ספרים תרצו להזמין?</legend>
+          <div class="order-book-options" id="order-book-options"></div>
+        </fieldset>
+        <div class="order-summary" aria-live="polite">
+          <strong id="order-selection-text">יש לבחור לפחות ספר אחד</strong>
+          <span id="order-price-breakdown"></span>
+          <b id="order-total"></b>
+        </div>
         <label>שם מלא<input name="fullName" autocomplete="name" required></label>
         <label>כתובת מלאה למשלוח<textarea name="address" autocomplete="street-address" rows="3" required></textarea></label>
         <label>טלפון<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
-        <p class="privacy-note">הפרטים אינם נשמרים באתר. לחיצה על האישור תשלח אותם למעיין בוואטסאפ.</p>
-        <button class="button button-primary order-submit" type="submit">אישור ושליחת ההזמנה בוואטסאפ</button>
+        <label class="order-honey" aria-hidden="true">אין למלא שדה זה<input name="website" tabindex="-1" autocomplete="off"></label>
+        <p class="privacy-note">פרטי ההזמנה יישלחו למעיין במייל באמצעות שירות טפסים חיצוני. התשלום נפתח רק לאחר אישור קליטת ההזמנה.</p>
+        <p class="order-form-status" id="order-form-status" role="status"></p>
+        <button class="button button-primary order-submit" type="submit">אישור ההזמנה וקבלת מספר הזמנה</button>
       </form>
 
       <section class="order-payment" id="order-payment" hidden>
-        <h3>ההזמנה אושרה — עכשיו לתשלום</h3>
-        <p>הסכום לתשלום הוא <strong>75 ₪</strong>, כולל משלוח.</p>
+        <h3>ההזמנה נקלטה — עכשיו לתשלום</h3>
+        <div class="order-confirmation-number">מספר ההזמנה שלך: <strong id="order-number"></strong></div>
+        <p>הסכום לתשלום הוא <strong id="payment-total"></strong>, כולל משלוח אחד לכל הספרים.</p>
         <div class="payment-qrs">
           <a class="payment-qr" id="order-bit" target="_blank" rel="noopener">
             <img id="order-bit-qr" alt="קוד QR לתשלום ב־Bit למעיין גלעד">
@@ -136,7 +160,7 @@
             <span><strong>תשלום ב־PayBox</strong><small>לחיצה או סריקה</small></span>
           </a>
         </div>
-        <a class="whatsapp-confirm" id="order-whatsapp" target="_blank" rel="noopener">שליחה חוזרת של פרטי ההזמנה בוואטסאפ ↗</a>
+        <a class="whatsapp-confirm" id="order-whatsapp" target="_blank" rel="noopener">שליחת מספר ההזמנה בוואטסאפ ↗</a>
       </section>
     </div>
   </dialog>

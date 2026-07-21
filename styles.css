@@ -126,6 +126,21 @@ h1 em { color: #e1c58c; font-style: normal; }
 .direct-purchase small { display: block; margin-top: .75rem; color: var(--muted); font-size: .72rem; }
 .price-note { color: var(--muted); text-align: center; margin: 4rem auto 0; font-size: .78rem; }
 
+.direct-shop-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr); gap: clamp(3rem, 7vw, 7rem); align-items: center; padding: clamp(5rem, 9vw, 8rem) clamp(1.25rem, 7vw, 8rem); background: #eadfce; }
+.direct-shop-copy h2 { margin: 0; font-family: var(--serif); font-size: clamp(3rem, 5.4vw, 5.8rem); font-weight: 500; line-height: .98; }
+.direct-shop-copy > p:not(.eyebrow) { max-width: 650px; color: #504b42; line-height: 1.85; }
+.direct-shop-copy ul { margin: 1.5rem 0 2rem; padding-inline-start: 1.25rem; color: var(--muted); line-height: 1.9; }
+.direct-shop-button { border: 0; font-family: inherit; font-size: .95rem; cursor: pointer; }
+.direct-shop-books { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; align-items: end; }
+.direct-shop-book { display: grid; gap: .75rem; padding: .65rem; border: 1px solid rgba(23,21,16,.17); background: rgba(255,255,255,.56); color: var(--ink); font-family: inherit; text-align: right; cursor: pointer; transition: transform .2s, background .2s; }
+.direct-shop-book:hover { transform: translateY(-5px); background: white; }
+.direct-shop-book:nth-child(2) { transform: translateY(-1.4rem); }
+.direct-shop-book:nth-child(2):hover { transform: translateY(calc(-1.4rem - 5px)); }
+.direct-shop-book img { width: 100%; aspect-ratio: 2/3; object-fit: cover; box-shadow: -10px 14px 24px rgba(48,37,21,.2); }
+.direct-shop-book > span { display: grid; gap: .15rem; }
+.direct-shop-book strong { font-size: .78rem; }
+.direct-shop-book small { color: var(--rust-dark); font-weight: 800; }
+
 .game-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 640px; background: var(--blue); color: white; overflow: hidden; }
 .game-visual { position: relative; min-height: 600px; display: grid; place-items: center; background: radial-gradient(circle at 50% 45%, rgba(213,177,102,.18), transparent 48%), linear-gradient(145deg, #111c25, #213b4c); }
 .game-visual::before, .game-visual::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; width: 430px; height: 430px; }
@@ -174,10 +189,25 @@ h1 em { color: #e1c58c; font-style: normal; }
 #direct-order-form label { display: grid; gap: .35rem; font-size: .82rem; font-weight: 700; }
 #direct-order-form input, #direct-order-form textarea { width: 100%; border: 1px solid var(--line); border-radius: 2px; background: white; color: var(--ink); padding: .8rem; font: inherit; }
 #direct-order-form input:focus, #direct-order-form textarea:focus { outline: 2px solid rgba(167,65,40,.35); border-color: var(--rust); }
+.order-books-fieldset { margin: 1.2rem 0 0; padding: 0; border: 0; }
+.order-books-fieldset legend { margin-bottom: .7rem; font-size: .85rem; font-weight: 800; }
+.order-book-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+#direct-order-form .order-book-option { grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: .6rem; padding: .55rem; border: 1px solid var(--line); background: white; cursor: pointer; }
+#direct-order-form .order-book-option:has(input:checked) { border: 2px solid var(--rust); background: #fff4df; }
+.order-book-option input { position: absolute; width: 1px !important; height: 1px; opacity: 0; }
+.order-book-option img { width: 48px; aspect-ratio: 2/3; object-fit: cover; }
+.order-book-option > span { display: grid; gap: .15rem; }
+.order-book-option strong { font-size: .72rem; line-height: 1.35; }
+.order-book-option small { color: var(--rust-dark); font-weight: 800; }
+.order-honey { position: absolute !important; left: -9999px; }
 .privacy-note { margin: 0; color: var(--muted); font-size: .74rem; line-height: 1.6; }
+.order-form-status { min-height: 1.4em; margin: 0; color: var(--rust-dark); font-size: .8rem; font-weight: 700; }
 .order-submit { border: 0; font-family: inherit; font-size: .9rem; cursor: pointer; }
+.order-submit:disabled { cursor: wait; opacity: .65; }
 .order-payment h3 { margin: 1.5rem 0 .4rem; font-family: var(--serif); font-size: 1.7rem; }
 .order-payment > p { margin-top: 0; color: var(--muted); }
+.order-confirmation-number { margin: 1rem 0; padding: 1rem; border: 2px solid var(--rust); background: #fff4df; text-align: center; }
+.order-confirmation-number strong { display: block; margin-top: .3rem; color: var(--rust-dark); font-family: var(--serif); font-size: 1.75rem; direction: ltr; }
 .order-payment > .whatsapp-confirm { display: block; margin-top: .85rem; padding: .8rem; background: #257b51; color: white; text-align: center; text-decoration: none; font-size: .8rem; }
 
 .community-section { padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 6vw, 7rem); background: var(--rust); }
@@ -210,6 +240,8 @@ footer > a:last-child { text-underline-offset: 4px; }
   .section-heading { grid-template-columns: 1fr; gap: 2rem; }
   .book { grid-template-columns: minmax(230px, .75fr) 1.25fr; gap: 2.5rem; }
   .book-cover-wrap { min-height: 430px; }
+  .direct-shop-section { grid-template-columns: 1fr; }
+  .direct-shop-books { max-width: 620px; }
   .game-section { grid-template-columns: 1fr; }
   .game-visual { min-height: 500px; }
 }
@@ -263,7 +295,15 @@ footer > a:last-child { text-underline-offset: 4px; }
   .payment-actions a { flex: 1 1 100%; text-align: center; }
   .order-dialog-inner { padding: 1.25rem 1rem; }
   .order-dialog h2 { padding-inline-end: 2.5rem; font-size: 2.25rem; }
+  .order-book-options { grid-template-columns: 1fr; }
+  #direct-order-form .order-book-option { grid-template-columns: 42px minmax(0, 1fr); }
+  .order-book-option img { width: 42px; }
   .order-submit { width: 100%; }
+  .direct-shop-section { padding: 4rem 1rem; gap: 3rem; }
+  .direct-shop-copy h2 { font-size: 2.8rem; }
+  .direct-shop-books { gap: .4rem; }
+  .direct-shop-book { padding: .4rem; }
+  .direct-shop-book strong { font-size: .66rem; }
   .game-copy { order: -1; padding: 4rem 1.25rem 3rem; }
   .game-visual { min-height: 360px; }
   .game-card { width: 195px; }

@@ -88,21 +88,76 @@ function connectTabs() {
   });
 }
 
-function connectDirectOrders(directSales) {
+function renderDirectShop(books, directSales) {
+  document.querySelector("#direct-shop-books").innerHTML = books.map(book => `
+    <button class="direct-shop-book" type="button" data-direct-shop-book="${book.id}" aria-label="הזמנת ${book.title} ישירות מהסופרת">
+      <img src="${book.cover}" alt="עטיפת ${book.title}" loading="lazy">
+      <span><strong>${book.title}</strong><small>${directSales.price} ₪</small></span>
+    </button>`).join("");
+}
+
+function createOrderNumber() {
+  const date = new Date().toISOString().slice(2, 10).replaceAll("-", "");
+  const values = new Uint32Array(1);
+  if (globalThis.crypto?.getRandomValues) crypto.getRandomValues(values);
+  else values[0] = Math.floor(Math.random() * 0xffffffff);
+  return `MG-${date}-${values[0].toString(36).slice(0, 5).toUpperCase().padStart(5, "0")}`;
+}
+
+function connectDirectOrders(directSales, books) {
   const dialog = document.querySelector("#direct-order-dialog");
   const form = document.querySelector("#direct-order-form");
   const payment = document.querySelector("#order-payment");
-  let selectedBook = "";
+  const options = document.querySelector("#order-book-options");
+  const status = document.querySelector("#order-form-status");
+  const submitButton = form.querySelector(".order-submit");
+  const booksById = new Map(books.map(book => [book.id, book]));
+
+  options.innerHTML = books.map(book => `
+    <label class="order-book-option">
+      <input type="checkbox" name="orderedBooks" value="${book.id}">
+      <img src="${book.cover}" alt="" loading="lazy">
+      <span><strong>${book.title}</strong><small>${directSales.price} ₪</small></span>
+    </label>`).join("");
+
+  const selectedBooks = () => [...form.querySelectorAll('input[name="orderedBooks"]:checked')]
+    .map(input => booksById.get(input.value))
+    .filter(Boolean);
+
+  const updateSummary = () => {
+    const selected = selectedBooks();
+    const booksTotal = selected.length * directSales.price;
+    const shipping = selected.length ? directSales.shipping : 0;
+    document.querySelector("#order-selection-text").textContent = selected.length
+      ? selected.map(book => book.title).join(" · ")
+      : "יש לבחור לפחות ספר אחד";
+    document.querySelector("#order-price-breakdown").textContent = selected.length
+      ? `${selected.length} ספרים: ${booksTotal} ₪ · משלוח אחד: ${shipping} ₪`
+      : "";
+    document.querySelector("#order-total").textContent = selected.length ? `סה״כ: ${booksTotal + shipping} ₪` : "";
+  };
+
+  const openOrder = selectedIds => {
+    form.reset();
+    form.querySelectorAll('input[name="orderedBooks"]').forEach(input => {
+      input.checked = selectedIds.includes(input.value);
+    });
+    status.textContent = "";
+    submitButton.disabled = false;
+    submitButton.textContent = "אישור ההזמנה וקבלת מספר הזמנה";
+    form.hidden = false;
+    payment.hidden = true;
+    updateSummary();
+    dialog.showModal();
+  };
 
   document.querySelectorAll("[data-direct-order]").forEach(trigger => trigger.addEventListener("click", event => {
     event.preventDefault();
-    selectedBook = trigger.dataset.bookTitle;
-    document.querySelector("#order-book-title").textContent = selectedBook;
-    form.reset();
-    form.hidden = false;
-    payment.hidden = true;
-    dialog.showModal();
+    openOrder([trigger.dataset.bookId]);
   }));
+  document.querySelectorAll("[data-direct-shop-book]").forEach(trigger => trigger.addEventListener("click", () => openOrder([trigger.dataset.directShopBook])));
+  document.querySelector("[data-open-direct-shop]").addEventListener("click", () => openOrder(books.map(book => book.id)));
+  options.addEventListener("change", updateSummary);
 
   document.querySelector("[data-close-order]").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", event => {
@@ -114,25 +169,63 @@ function connectDirectOrders(directSales) {
   document.querySelector("#order-paybox").href = directSales.payboxUrl;
   document.querySelector("#order-paybox-qr").src = directSales.payboxQr;
 
-  form.addEventListener("submit", event => {
+  form.addEventListener("submit", async event => {
     event.preventDefault();
+    if (form.elements.website.value) return;
+    const selected = selectedBooks();
+    if (!selected.length) {
+      status.textContent = "יש לבחור לפחות ספר אחד.";
+      form.querySelector('input[name="orderedBooks"]')?.focus();
+      return;
+    }
     const fields = new FormData(form);
-    const total = directSales.price + directSales.shipping;
+    const booksTotal = selected.length * directSales.price;
+    const total = booksTotal + directSales.shipping;
+    const orderNumber = createOrderNumber();
+    const bookTitles = selected.map(book => book.title).join(", ");
     const message = [
-      "היי מעיין, אני רוצה להזמין ספר ישירות ממך:",
-      `ספר: ${selectedBook}`,
-      `שם מלא: ${fields.get("fullName")}`,
-      `כתובת מלאה: ${fields.get("address")}`,
-      `טלפון: ${fields.get("phone")}`,
-      `מחיר הספר: ${directSales.price} ₪`,
-      `משלוח: ${directSales.shipping} ₪`,
+      `היי מעיין, ההזמנה שלי היא ${orderNumber}`,
+      `ספרים: ${bookTitles}`,
       `סה״כ: ${total} ₪`
     ].join("\n");
-    const whatsappUrl = `https://wa.me/${directSales.whatsappNumber}?text=${encodeURIComponent(message)}`;
-    document.querySelector("#order-whatsapp").href = whatsappUrl;
-    form.hidden = true;
-    payment.hidden = false;
-    window.open(whatsappUrl, "_blank", "noopener");
+
+    submitButton.disabled = true;
+    submitButton.textContent = "שולחת את ההזמנה…";
+    status.textContent = "";
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${directSales.orderEmail}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `הזמנה חדשה מהאתר — ${orderNumber}`,
+          _template: "table",
+          _captcha: "false",
+          _url: "https://mayalo22.github.io/#direct-shop",
+          "מספר הזמנה": orderNumber,
+          "ספרים": bookTitles,
+          "כמות ספרים": selected.length,
+          "מחיר ספרים": `${booksTotal} ₪`,
+          "משלוח": `${directSales.shipping} ₪`,
+          "סה״כ לתשלום": `${total} ₪`,
+          "שם מלא": fields.get("fullName"),
+          "כתובת מלאה": fields.get("address"),
+          "טלפון": fields.get("phone")
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.success === false || result.success === "false") throw new Error("order email failed");
+
+      document.querySelector("#order-number").textContent = orderNumber;
+      document.querySelector("#payment-total").textContent = `${total} ₪`;
+      document.querySelector("#order-whatsapp").href = `https://wa.me/${directSales.whatsappNumber}?text=${encodeURIComponent(message)}`;
+      form.hidden = true;
+      payment.hidden = false;
+    } catch (error) {
+      status.textContent = "לא הצלחנו לשלוח את ההזמנה כרגע. בדקו את החיבור ונסו שוב.";
+      submitButton.disabled = false;
+      submitButton.textContent = "ניסיון נוסף לשליחת ההזמנה";
+    }
   });
 }
 
@@ -149,9 +242,10 @@ async function init() {
     if (!response.ok) throw new Error("data unavailable");
     const data = await response.json();
     document.querySelector("#books-list").innerHTML = data.books.map((book, index) => renderBook(book, index, data.directSales)).join("");
+    renderDirectShop(data.books, data.directSales);
     renderInstagram(data.instagram);
     connectTabs();
-    connectDirectOrders(data.directSales);
+    connectDirectOrders(data.directSales, data.books);
     const date = new Date(data.updatedAt);
     document.querySelector("#price-status").textContent = `המחירים נבדקו לאחרונה ב־${new Intl.DateTimeFormat("he-IL", { dateStyle: "long", timeZone: "Asia/Jerusalem" }).format(date)} · המחיר הקובע הוא המחיר באתר החנות בעת הרכישה.`;
   } catch (error) {
