@@ -114,26 +114,6 @@ for (const book of data.books) {
   }
 }
 
-try {
-  const instagramRaw = await fetchText(
-    "https://www.instagram.com/api/v1/users/web_profile_info/?username=maayan_gilad_writing",
-    { "x-ig-app-id": "936619743392459", "x-asbd-id": "129477", referer: "https://www.instagram.com/maayan_gilad_writing/", accept: "*/*" }
-  );
-  const instagram = JSON.parse(instagramRaw);
-  const edges = instagram?.data?.user?.edge_owner_to_timeline_media?.edges || [];
-  const fresh = edges.slice(0, 6).map(({ node }) => ({
-    url: `https://www.instagram.com/p/${node.shortcode}/`,
-    image: node.thumbnail_src || node.display_url,
-    caption: node.edge_media_to_caption?.edges?.[0]?.node?.text?.replace(/\s+/g, " ").slice(0, 180) || "פוסט חדש באינסטגרם",
-    alt: node.accessibility_caption || "פוסט מאינסטגרם של מעיין גלעד",
-    isVideo: Boolean(node.is_video),
-    publishedAt: new Date(node.taken_at_timestamp * 1000).toISOString()
-  }));
-  if (fresh.length) data.instagram = fresh;
-} catch (error) {
-  console.warn(`Keeping last Instagram feed: ${error.message}`);
-}
-
 data.updatedAt = new Date().toISOString();
 await writeFile(dataUrl, `${JSON.stringify(data, null, 2)}\n`, "utf8");
-console.log(`Updated ${data.books.length} books and ${data.instagram.length} Instagram items at ${data.updatedAt}`);
+console.log(`Updated ${data.books.length} books at ${data.updatedAt}`);

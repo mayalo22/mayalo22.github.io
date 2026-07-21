@@ -53,27 +53,6 @@ function renderBook(book, index, directSales) {
     </article>`;
 }
 
-function renderInstagram(items) {
-  const grid = document.querySelector("#instagram-grid");
-  if (!items?.length) {
-    grid.innerHTML = `<a class="insta-card insta-fallback" href="https://www.instagram.com/maayan_gilad_writing/" target="_blank" rel="noopener"><div class="insta-caption"><p>הפוסטים והסרטונים החדשים מחכים לכן באינסטגרם.</p><span>לצפייה באינסטגרם ↗</span></div></a>`;
-    return;
-  }
-  grid.innerHTML = items.slice(0, 6).map(item => `
-    <a class="insta-card" href="${item.url}" target="_blank" rel="noopener" aria-label="פתיחת הפוסט באינסטגרם">
-      <span class="insta-media">
-        <img src="${item.image}" alt="${item.alt || "פוסט מאינסטגרם של מעיין גלעד"}" loading="lazy" referrerpolicy="no-referrer">
-        <span class="insta-type" aria-hidden="true">${item.isVideo ? "▶" : "◎"}</span>
-        <span class="insta-image-fallback">לצפייה בפוסט באינסטגרם</span>
-      </span>
-      <span class="insta-caption"><p>${item.caption || "לצפייה בפוסט באינסטגרם"}</p><span>לצפייה בפוסט ↗</span></span>
-    </a>`).join("");
-
-  grid.querySelectorAll("img").forEach(img => img.addEventListener("error", () => {
-    img.closest(".insta-media")?.classList.add("image-missing");
-  }, { once: true }));
-}
-
 function connectTabs() {
   document.querySelectorAll(".book").forEach(book => {
     book.querySelectorAll(".format-tab").forEach(tab => tab.addEventListener("click", () => {
@@ -243,7 +222,6 @@ async function init() {
     const data = await response.json();
     document.querySelector("#books-list").innerHTML = data.books.map((book, index) => renderBook(book, index, data.directSales)).join("");
     renderDirectShop(data.books, data.directSales);
-    renderInstagram(data.instagram);
     connectTabs();
     connectDirectOrders(data.directSales, data.books);
     const date = new Date(data.updatedAt);

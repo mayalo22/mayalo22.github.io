@@ -68,7 +68,7 @@ h1 em { color: #e1c58c; font-style: normal; }
 .books-section { padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 6vw, 7rem); }
 .section-heading { display: grid; grid-template-columns: 1fr 1.2fr; column-gap: 4rem; align-items: end; margin-bottom: 5rem; }
 .section-heading .eyebrow { grid-column: 1 / -1; }
-.section-heading h2, .social-heading h2, .community-card h2 { font-size: clamp(3rem, 5.6vw, 6rem); }
+.section-heading h2, .community-card h2 { font-size: clamp(3rem, 5.6vw, 6rem); }
 .section-heading > p:last-child { max-width: 480px; margin: 0 0 .5rem; color: var(--muted); line-height: 1.8; }
 .books-list { display: grid; gap: 7rem; }
 .book { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.3fr); gap: clamp(2.5rem, 7vw, 7rem); align-items: start; border-top: 1px solid var(--line); padding-top: 4rem; }
@@ -156,25 +156,6 @@ h1 em { color: #e1c58c; font-style: normal; }
 .game-copy h2 { font-size: clamp(3rem, 5vw, 5.6rem); }
 .game-copy p:not(.eyebrow) { color: rgba(255,255,255,.67); line-height: 1.9; max-width: 540px; margin: 2rem 0; }
 .button-light { background: var(--cream); color: var(--ink); }
-
-.social-section { padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 6vw, 7rem); background: #f8f3ea; }
-.social-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 3.5rem; }
-.instagram-profile { display: flex; gap: .8rem; align-items: center; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: .8rem; }
-.instagram-profile span:last-child { display: grid; }
-.instagram-profile small { color: var(--muted); margin-top: .2rem; }
-.ig-icon { font-size: 2.5rem; color: var(--rust); }
-.instagram-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-.insta-card { display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: 1px solid var(--line); background: white; color: var(--ink); text-decoration: none; }
-.insta-media { position: relative; display: grid; place-items: center; aspect-ratio: 4/5; overflow: hidden; background: linear-gradient(145deg, #ded3c1, #b76a53); color: white; }
-.insta-card img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
-.insta-card:hover img { transform: scale(1.025); }
-.insta-image-fallback { position: absolute; max-width: 12rem; padding: 1rem; text-align: center; font-family: var(--serif); font-size: 1.35rem; }
-.insta-media.image-missing img { display: none; }
-.insta-caption { display: grid; align-content: space-between; gap: .8rem; padding: 1rem; }
-.insta-caption p { margin: 0; color: #504b42; font-size: .84rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.insta-caption > span { color: var(--rust); font-size: .78rem; font-weight: 700; }
-.insta-fallback { min-height: 240px; }
-.insta-type { position: absolute; z-index: 2; top: 1rem; left: 1rem; display: grid; place-items: center; width: 34px; height: 34px; background: rgba(0,0,0,.45); border-radius: 50%; backdrop-filter: blur(8px); }
 
 .order-dialog { width: min(94vw, 680px); max-height: 92vh; padding: 0; border: 0; border-radius: 8px; background: var(--paper); color: var(--ink); box-shadow: 0 28px 90px rgba(0,0,0,.42); }
 .order-dialog::backdrop { background: rgba(12,15,17,.72); backdrop-filter: blur(3px); }
@@ -267,10 +248,10 @@ footer > a:last-child { text-underline-offset: 4px; }
   .orbit-two { display: none; }
   .floating-note { top: auto; bottom: 8px; right: 0; font-size: .82rem; }
   .scroll-cue { display: none; }
-  .books-section, .social-section { padding-inline: 1rem; }
+  .books-section { padding-inline: 1rem; }
   .books-section { padding-top: 4rem; }
   .section-heading { margin-bottom: 2.5rem; gap: 1.2rem; }
-  .section-heading h2, .social-heading h2, .community-card h2 { font-size: 2.8rem; }
+  .section-heading h2, .community-card h2 { font-size: 2.8rem; }
   .books-list { gap: 4rem; }
   .book, .book:nth-child(even) { grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-top: 2rem; }
   .book:nth-child(even) .book-cover-wrap { order: 0; }
@@ -307,9 +288,6 @@ footer > a:last-child { text-underline-offset: 4px; }
   .game-copy { order: -1; padding: 4rem 1.25rem 3rem; }
   .game-visual { min-height: 360px; }
   .game-card { width: 195px; }
-  .social-heading { align-items: flex-start; flex-direction: column; }
-  .instagram-grid { grid-template-columns: 1fr; }
-  .insta-media { aspect-ratio: 4/4.5; }
   .community-section { padding-inline: 1rem; }
   .community-links { display: grid; }
   .community-links a { width: 100%; }
@@ -321,7 +299,6 @@ footer > a:last-child { text-underline-offset: 4px; }
   .hero { padding-inline: .9rem; }
   .cover { width: 42vw; }
   .price-value { font-size: 1.18rem; }
-  .instagram-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
