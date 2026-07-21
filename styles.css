@@ -32,6 +32,7 @@ nav { display: flex; gap: 2.3rem; }
 nav a { text-decoration: none; font-size: .9rem; color: rgba(255,255,255,.76); transition: color .2s; }
 nav a:hover { color: white; }
 .header-cta { border: 1px solid rgba(255,255,255,.65); border-radius: 100px; padding: .68rem 1.25rem; text-decoration: none; font-size: .86rem; }
+.header-whatsapp { border-color: rgba(255,255,255,.8); background: #257b51; color: white; font-weight: 700; }
 
 .hero { min-height: 760px; height: 100svh; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(400px, .95fr); align-items: center; gap: 3rem; padding: 110px clamp(1.5rem, 7vw, 8rem) 60px; position: relative; overflow: hidden; color: var(--cream); background: radial-gradient(circle at 77% 34%, #344d5c 0, #1e3442 23%, transparent 48%), linear-gradient(120deg, #171712 0%, #1a252b 58%, #101417 100%); }
 .hero::before { content: ""; position: absolute; inset: 0; opacity: .19; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.34'/%3E%3C/svg%3E"); pointer-events: none; }
@@ -48,6 +49,8 @@ h1 em { color: #e1c58c; font-style: normal; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--rust); color: white; }
 .button-primary:hover { background: #bd4b2f; }
+.button-whatsapp { background: #257b51; color: white; }
+.button-whatsapp:hover { background: #2f9162; }
 .text-link { color: rgba(255,255,255,.8); text-underline-offset: 5px; font-size: .92rem; }
 
 .hero-books { position: relative; height: 570px; min-width: 440px; z-index: 2; perspective: 1200px; }
@@ -214,7 +217,7 @@ footer > a:last-child { text-underline-offset: 4px; }
 @media (max-width: 680px) {
   body { overflow-x: hidden; }
   .site-header { height: 70px; }
-  .header-cta { display: none; }
+  .header-cta { display: inline-flex; padding: .5rem .7rem; font-size: .7rem; white-space: nowrap; }
   .brand { font-size: 1rem; }
   .brand-mark { width: 34px; height: 34px; }
   .hero { min-height: 0; padding: 105px 1.1rem 28px; gap: 1.5rem; }
