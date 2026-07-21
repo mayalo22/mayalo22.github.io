@@ -1,0 +1,291 @@
+{
+  "updatedAt": "2026-07-21T17:42:43.845Z",
+  "books": [
+    {
+      "id": "stars",
+      "title": "כוכבים רואים רק בחושך",
+      "kicker": "סדרת הכוכבים · ספר ראשון · עומד בפני עצמו",
+      "cover": "assets/stars-in-darkness.jpg",
+      "description": "עדן ברחה מהעבר כדי לבנות לעצמה עתיד חדש כאמנית בלונדון. רפאל רגיל לשלוט בהכול — עד שהלב שלו נתפס בלי שום היגיון. שתי נשמות שבורות, פצעים ישנים ואהבה שמגיעה דווקא כשהכול מתמוטט.",
+      "tags": [
+        "שונאים לאוהבים",
+        "קרבה כפויה",
+        "סלואו ברן",
+        "רומנטיקה עכשווית"
+      ],
+      "extras": [
+        {
+          "label": "למשחק של הספר ↗",
+          "url": "https://kochavim-bachoshech-game.mayalo.chatgpt.site/"
+        }
+      ],
+      "prices": {
+        "digital": [
+          {
+            "store": "עברית",
+            "price": 25,
+            "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
+          },
+          {
+            "store": "ביבוקס",
+            "price": 20,
+            "url": "https://bbooks.co.il/book/כוכבים-רואים-רק-בחושך"
+          },
+          {
+            "store": "אינדיבוק",
+            "price": 35,
+            "url": "https://indiebook.co.il/shop/כוכבים-רואים-רק-בחושך"
+          },
+          {
+            "store": "סטימצקי",
+            "price": 35,
+            "url": "https://www.steimatzky.co.il/012010569"
+          }
+        ],
+        "print": [
+          {
+            "store": "עברית",
+            "price": 55,
+            "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
+          },
+          {
+            "store": "ביבוקס",
+            "price": 44,
+            "url": "https://bbooks.co.il/book/כוכבים-רואים-רק-בחושך"
+          },
+          {
+            "store": "סטימצקי",
+            "price": 69,
+            "url": "https://www.steimatzky.co.il/012010569"
+          },
+          {
+            "store": "צומת ספרים",
+            "price": 98,
+            "url": "https://www.booknet.co.il/מוצרים/כוכבים-רואים-רק-בחושך-160100000079"
+          }
+        ],
+        "audio": [
+          {
+            "store": "עברית",
+            "price": 35,
+            "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
+          },
+          {
+            "store": "ביבוקס",
+            "price": 29,
+            "url": "https://bbooks.co.il/book/כוכבים-רואים-רק-בחושך"
+          }
+        ]
+      }
+    },
+    {
+      "id": "never",
+      "title": "לא אוותר לעולם",
+      "kicker": "רומן רומנטי עכשווי · ספר עצמאי",
+      "cover": "assets/never-give-up.jpg",
+      "description": "נעמי היא קצינה בכירה, אם ואשת קריירה שנמצאת בדיוק במקום שעליו חלמה. ואז מגיע גיא — חייל צעיר שמערער את כל מה שידעה על חובה, משפחה והלב. אהבה אסורה שנולדת מתוך כאב ונוגעת באמת שאי־אפשר לעצור.",
+      "tags": [
+        "אהבה אסורה",
+        "רומנטיקה בצבא",
+        "פער גילים הפוך",
+        "18+"
+      ],
+      "extras": [],
+      "prices": {
+        "digital": [
+          {
+            "store": "עברית",
+            "price": 25,
+            "url": "https://www.e-vrit.co.il/product/38170/לא-אוותר-לעולם"
+          },
+          {
+            "store": "ביבוקס",
+            "price": 24,
+            "url": "https://bbooks.co.il/book/לא-אוותר-לעולם"
+          },
+          {
+            "store": "אינדיבוק",
+            "price": 35,
+            "url": "https://indiebook.co.il/shop/לא-אוותר-לעולם"
+          },
+          {
+            "store": "סטימצקי",
+            "price": 27,
+            "url": "https://www.steimatzky.co.il/012010524"
+          }
+        ],
+        "print": [
+          {
+            "store": "עברית",
+            "price": 68.6,
+            "url": "https://www.e-vrit.co.il/product/38170/לא-אוותר-לעולם"
+          },
+          {
+            "store": "ביבוקס",
+            "price": 44,
+            "url": "https://bbooks.co.il/book/לא-אוותר-לעולם"
+          },
+          {
+            "store": "סטימצקי",
+            "price": 69,
+            "url": "https://www.steimatzky.co.il/012010524"
+          },
+          {
+            "store": "צומת ספרים",
+            "price": 98,
+            "url": "https://www.booknet.co.il/מוצרים/לא-אוותר-לעולם-160100000073"
+          }
+        ],
+        "audio": [
+          {
+            "store": "עברית",
+            "price": null,
+            "url": "https://www.e-vrit.co.il/product/38170/לא-אוותר-לעולם"
+          },
+          {
+            "store": "ביבוקס",
+            "price": null,
+            "url": "https://bbooks.co.il/book/לא-אוותר-לעולם"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transparent",
+      "title": "ילדה שקופה",
+      "kicker": "רומן התבגרות · בהשראת סיפור אמיתי",
+      "cover": "assets/transparent-girl.jpg",
+      "description": "מאיה לוטם רק רוצה לעבור את התיכון בשלום, אבל כשהאהבה מתפרקת והכול סוער סביבה, היא צריכה לגלות מי באמת רואה אותה. סיפור על חרם, זהות, שבר והכוח למצוא התחלה חדשה.",
+      "tags": [
+        "התבגרות",
+        "אוטו־פיקשן",
+        "צמיחה ממשבר",
+        "פרוזה מקור"
+      ],
+      "extras": [
+        {
+          "label": "רכישה מודפסת דרך דברת אוהב עמי — 50 ₪ ↗",
+          "url": "https://dovrati.com/product/ילדה-שקופה"
+        }
+      ],
+      "directPurchase": {
+        "price": 50,
+        "phone": "0502410393",
+        "phoneDisplay": "050-241-0393",
+        "bitQr": "assets/payment-bit.png",
+        "bitUrl": "https://flowto.it/ey0yyWBT9W",
+        "payboxQr": "assets/payment-paybox.png",
+        "payboxUrl": "https://flowto.it/ey0ypKSZdG",
+        "whatsapp": "https://wa.me/972502410393?text=היי%20מעיין%2C%20שילמתי%2050%20ש״ח%20עבור%20עותק%20מודפס%20של%20ילדה%20שקופה.%20מצרפת%20אישור%20תשלום."
+      },
+      "prices": {
+        "digital": [
+          {
+            "store": "עברית",
+            "price": 28,
+            "url": "https://www.e-vrit.co.il/product/36953/ילדה-שקופה"
+          },
+          {
+            "store": "ביבוקס",
+            "price": null,
+            "url": "https://bbooks.co.il/מחברים/מעיין-גלעד"
+          },
+          {
+            "store": "אינדיבוק",
+            "price": null,
+            "url": "https://indiebook.co.il"
+          },
+          {
+            "store": "סטימצקי",
+            "price": null,
+            "url": "https://www.steimatzky.co.il"
+          }
+        ],
+        "print": [
+          {
+            "store": "עברית",
+            "price": null,
+            "url": "https://www.e-vrit.co.il/product/36953/ילדה-שקופה"
+          },
+          {
+            "store": "ביבוקס",
+            "price": null,
+            "url": "https://bbooks.co.il/מחברים/מעיין-גלעד"
+          },
+          {
+            "store": "סטימצקי",
+            "price": null,
+            "url": "https://www.steimatzky.co.il"
+          },
+          {
+            "store": "צומת ספרים",
+            "price": null,
+            "url": "https://www.booknet.co.il"
+          }
+        ],
+        "audio": [
+          {
+            "store": "עברית",
+            "price": null,
+            "url": "https://www.e-vrit.co.il/product/36953/ילדה-שקופה"
+          },
+          {
+            "store": "ביבוקס",
+            "price": null,
+            "url": "https://bbooks.co.il/מחברים/מעיין-גלעד"
+          }
+        ]
+      }
+    }
+  ],
+  "instagram": [
+    {
+      "url": "https://www.instagram.com/p/DX7DOoSjC-Y/",
+      "image": "https://instagram.fhfa1-1.fna.fbcdn.net/v/t51.82787-15/689050869_17884471653549741_9218579639477742825_n.jpg?stp=c256.0.1088.1088a_dst-jpg_e35_s640x640_sh2.08_tt6&_nc_ht=instagram.fhfa1-1.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2gEbdVN3O3tgC2BaMzWyWw7uHpAVadjCWwGX_cYd7dHYEBpnjcgrm9KDkZ2UJsBJoDjL-6l1sPgjmj5QvhMML_ZZ&_nc_ohc=UsFr_fRxO84Q7kNvwGOs94H&_nc_gid=Z0OyR5D1SbxIE-nbVHXW5g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQDoYH65Ot2hfzt-Le0sMIehXHr0G_Hwe4GBjFgcC5DHQQ&oe=6A6592A1&_nc_sid=8b3546",
+      "caption": "⁨ חשיפת כריכה ופעילות נושאת פרסים!! כמה שאנחנו מתרגשות לחשוף בפניכם סוף-סוף את הכריכה המהפנטת של כוכבים רואים רק בחושך מאת מעיין גלעד ❤️‍🔥🤭 זוהי חשיפת הכריכה וגם פעילות נושאת פרס",
+      "alt": "פוסט מאינסטגרם של מעיין גלעד",
+      "isVideo": false,
+      "publishedAt": "2026-05-04T15:59:13.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/p/DSIXp5FDESh/",
+      "image": "https://instagram.fhfa1-1.fna.fbcdn.net/v/t51.82787-15/599033499_17861827671549741_250563456914520216_n.jpg?stp=c190.0.1060.1060a_dst-jpg_e15_s640x640_tt6&_nc_ht=instagram.fhfa1-1.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2gEbdVN3O3tgC2BaMzWyWw7uHpAVadjCWwGX_cYd7dHYEBpnjcgrm9KDkZ2UJsBJoDjL-6l1sPgjmj5QvhMML_ZZ&_nc_ohc=PP6Ci41Lyq8Q7kNvwGmG45T&_nc_gid=Z0OyR5D1SbxIE-nbVHXW5g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQCne2A5npMW3slCmZFB38plt4fjKI9MDH7vHtARImIi5A&oe=6A659915&_nc_sid=8b3546",
+      "caption": "⁨ ⁨ הגרלה שהיא גם חשיפת כריכה!!!**ההגרלה הסתיימה** אנחנו בטוחות שגם אתן הולכות להתעלף מהיופי של הכריכה הזאת!!!😍😇 הסופרת מעיין גלעד חושפת את הכריכה לרומן הטאבו שלה- לא אוותר לעולם",
+      "alt": "פוסט מאינסטגרם של מעיין גלעד",
+      "isVideo": false,
+      "publishedAt": "2025-12-11T17:00:00.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/p/DH2fJbJiL7u/",
+      "image": "https://instagram.fhfa1-1.fna.fbcdn.net/v/t51.2885-15/487686044_17850437601429110_7269360899334398135_n.jpg?stp=c472.0.1215.1215a_dst-jpg_e35_s640x640_sh2.08_tt6&_nc_ht=instagram.fhfa1-1.fna.fbcdn.net&_nc_cat=102&_nc_oc=Q6cZ2gEbdVN3O3tgC2BaMzWyWw7uHpAVadjCWwGX_cYd7dHYEBpnjcgrm9KDkZ2UJsBJoDjL-6l1sPgjmj5QvhMML_ZZ&_nc_ohc=_KzYWOPN1ukQ7kNvwFj-J3D&_nc_gid=Z0OyR5D1SbxIE-nbVHXW5g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQDCInaEQ2OrfyjHXxJCz7ZiI559p3DBpgsyU3Wy8E6MEg&oe=6A656B88&_nc_sid=8b3546",
+      "caption": "אני מתרגשת להציג בפניכם את הכריכה של הספר שלי \"ילדה שקופה\". התקציר עוד לא סופי וערוך אבל בעזרת השם בעוד כמה חודשים שתסתובבו בחנויות הספרים ותראו ספר שיראה לכם מוכר תזכרו מתי ראיתם ",
+      "alt": "פוסט מאינסטגרם של מעיין גלעד",
+      "isVideo": false,
+      "publishedAt": "2025-03-31T05:05:37.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/p/DbA4_J3tv9v/",
+      "image": "https://instagram.fhfa1-1.fna.fbcdn.net/v/t51.82787-15/747086795_17913570243429110_5729372726617501290_n.jpg?stp=c0.469.1206.1206a_dst-jpg_e35_s640x640_sh2.08_tt6&_nc_ht=instagram.fhfa1-1.fna.fbcdn.net&_nc_cat=102&_nc_oc=Q6cZ2gEbdVN3O3tgC2BaMzWyWw7uHpAVadjCWwGX_cYd7dHYEBpnjcgrm9KDkZ2UJsBJoDjL-6l1sPgjmj5QvhMML_ZZ&_nc_ohc=06jnbT6RA34Q7kNvwH-CE64&_nc_gid=Z0OyR5D1SbxIE-nbVHXW5g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQDeRiDyjfaE8mycd9u6wsPVfABb1jaG-nhu9RrTfWqwOw&oe=6A656793&_nc_sid=8b3546",
+      "caption": "אופס.",
+      "alt": "פוסט מאינסטגרם של מעיין גלעד",
+      "isVideo": true,
+      "publishedAt": "2026-07-20T12:00:20.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/p/DbAr3k_DNds/",
+      "image": "https://instagram.fhfa1-1.fna.fbcdn.net/v/t51.82787-15/753204648_18071351123462682_3302878821975678183_n.jpg?stp=c0.196.1179.1179a_dst-jpg_e35_s640x640_sh2.08_tt6&_nc_ht=instagram.fhfa1-1.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2gEbdVN3O3tgC2BaMzWyWw7uHpAVadjCWwGX_cYd7dHYEBpnjcgrm9KDkZ2UJsBJoDjL-6l1sPgjmj5QvhMML_ZZ&_nc_ohc=MQb9wQ1zgmUQ7kNvwGHw7EL&_nc_gid=Z0OyR5D1SbxIE-nbVHXW5g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQCdBH8dfWMEc6gCFdL8Hq3KBkrMpNnwFPFvQGkAY98_3Q&oe=6A656FD1&_nc_sid=8b3546",
+      "caption": "⁨ #סקירה6 לא אוותר לעולם || מעיין גלעד✨ נתחיל בזה שקניתי את הספר הזה ב55₪ אז מבחינתי לא הייתה אפשרות שלא אוהב אותו😂 סתם- תקשיבו!! הספר ריתק אותי מהרגע הראשון, אני מבטיחה לכם. מהשנ",
+      "alt": "פוסט מאינסטגרם של מעיין גלעד",
+      "isVideo": false,
+      "publishedAt": "2026-07-20T10:05:40.000Z"
+    },
+    {
+      "url": "https://www.instagram.com/p/Da-rxaTArq6/",
+      "image": "https://instagram.fhfa1-1.fna.fbcdn.net/v/t51.82787-15/748954565_17913456264429110_1056655582790657993_n.jpg?stp=c0.170.1024.1024a_dst-jpg_e15_s640x640_tt6&_nc_ht=instagram.fhfa1-1.fna.fbcdn.net&_nc_cat=102&_nc_oc=Q6cZ2gEbdVN3O3tgC2BaMzWyWw7uHpAVadjCWwGX_cYd7dHYEBpnjcgrm9KDkZ2UJsBJoDjL-6l1sPgjmj5QvhMML_ZZ&_nc_ohc=RnkBE6gT1-8Q7kNvwHiXjmc&_nc_gid=Z0OyR5D1SbxIE-nbVHXW5g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQAXdtI1kDqxQhuM67ShpPKl7loOx4VBqfXKVm860tY4lw&oe=6A659523&_nc_sid=8b3546",
+      "caption": "מחר יפורסם אחד המוצרים בחינם לשימושכם!",
+      "alt": "פוסט מאינסטגרם של מעיין גלעד",
+      "isVideo": false,
+      "publishedAt": "2026-07-19T15:26:20.000Z"
+    }
+  ]
+}
