@@ -6,12 +6,17 @@ const money = value => value == null
   : `<span class="price-value">${new Intl.NumberFormat("he-IL", { style: "currency", currency: "ILS", maximumFractionDigits: 1 }).format(value)}</span>`;
 
 function priceRows(rows) {
-  return rows.filter(item => item.price != null).map(item => `
-    <a class="price-row" href="${item.url}" target="_blank" rel="noopener" aria-label="רכישת הספר ב${item.store} במחיר ${item.price} שקלים">
+  const available = rows.filter(item => item.price != null);
+  const bestPrice = Math.min(...available.map(item => Number(item.price)));
+  return available.map(item => {
+    const isBest = Number(item.price) === bestPrice;
+    return `
+    <a class="price-row${isBest ? " best-offer" : ""}" href="${item.url}" target="_blank" rel="noopener" aria-label="רכישת הספר ב${item.store} במחיר ${item.price} שקלים${isBest ? ", ההצעה המשתלמת ביותר" : ""}">
       <span class="store-name">${item.store}</span>
       ${money(item.price)}
-      <span class="buy-link">לרכישה ↗</span>
-    </a>`).join("");
+      <span class="buy-link">${isBest ? '<span class="best-badge">הכי משתלם</span>' : ""} לרכישה ↗</span>
+    </a>`;
+  }).join("");
 }
 
 function renderBook(book, index) {
