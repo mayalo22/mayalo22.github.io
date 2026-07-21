@@ -1,4 +1,4 @@
-name: Update prices, Instagram and deploy
+name: Update prices and Instagram
 
 on:
   schedule:
@@ -12,18 +12,10 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    outputs:
-      should_run: ${{ steps.due.outputs.should_run }}
     steps:
       - uses: actions/checkout@v4
       - id: due
@@ -49,18 +41,3 @@ jobs:
           git add data.json
           git diff --cached --quiet || git commit -m "chore: refresh prices and Instagram"
           git push
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: update
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
