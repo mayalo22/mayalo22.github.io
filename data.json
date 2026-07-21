@@ -1,5 +1,16 @@
 {
   "updatedAt": "2026-07-21T17:42:43.845Z",
+  "directSales": {
+    "price": 50,
+    "shipping": 25,
+    "phone": "0502410393",
+    "phoneDisplay": "050-241-0393",
+    "bitQr": "assets/payment-bit.png",
+    "bitUrl": "https://flowto.it/ey0yyWBT9W",
+    "payboxQr": "assets/payment-paybox.png",
+    "payboxUrl": "https://flowto.it/ey0ypKSZdG",
+    "whatsappNumber": "972502410393"
+  },
   "books": [
     {
       "id": "stars",
@@ -162,22 +173,7 @@
         "צמיחה ממשבר",
         "פרוזה מקור"
       ],
-      "extras": [
-        {
-          "label": "רכישה מודפסת דרך דברת אוהב עמי — 50 ₪ ↗",
-          "url": "https://dovrati.com/product/ילדה-שקופה"
-        }
-      ],
-      "directPurchase": {
-        "price": 50,
-        "phone": "0502410393",
-        "phoneDisplay": "050-241-0393",
-        "bitQr": "assets/payment-bit.png",
-        "bitUrl": "https://flowto.it/ey0yyWBT9W",
-        "payboxQr": "assets/payment-paybox.png",
-        "payboxUrl": "https://flowto.it/ey0ypKSZdG",
-        "whatsapp": "https://wa.me/972502410393?text=היי%20מעיין%2C%20שילמתי%2050%20ש״ח%20עבור%20עותק%20מודפס%20של%20ילדה%20שקופה.%20מצרפת%20אישור%20תשלום."
-      },
+      "extras": [],
       "prices": {
         "digital": [
           {
@@ -202,6 +198,11 @@
           }
         ],
         "print": [
+          {
+            "store": "דברת אוהב עמי",
+            "price": 50,
+            "url": "https://dovrati.com/product/ילדה-שקופה"
+          },
           {
             "store": "עברית",
             "price": null,

@@ -103,6 +103,43 @@
     </section>
   </main>
 
+  <dialog class="order-dialog" id="direct-order-dialog" aria-labelledby="order-dialog-title">
+    <button class="dialog-close" type="button" data-close-order aria-label="סגירת חלון ההזמנה">×</button>
+    <div class="order-dialog-inner">
+      <p class="eyebrow">רכישה ישירה מהסופרת</p>
+      <h2 id="order-dialog-title">הזמנת ספר מודפס</h2>
+      <div class="order-summary" aria-live="polite">
+        <strong id="order-book-title"></strong>
+        <span>ספר: 50 ₪ · משלוח: 25 ₪</span>
+        <b>סה״כ לתשלום: 75 ₪</b>
+      </div>
+
+      <form id="direct-order-form">
+        <label>שם מלא<input name="fullName" autocomplete="name" required></label>
+        <label>כתובת מלאה למשלוח<textarea name="address" autocomplete="street-address" rows="3" required></textarea></label>
+        <label>טלפון<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+        <p class="privacy-note">הפרטים אינם נשמרים באתר. לחיצה על האישור תשלח אותם למעיין בוואטסאפ.</p>
+        <button class="button button-primary order-submit" type="submit">אישור ושליחת ההזמנה בוואטסאפ</button>
+      </form>
+
+      <section class="order-payment" id="order-payment" hidden>
+        <h3>ההזמנה אושרה — עכשיו לתשלום</h3>
+        <p>הסכום לתשלום הוא <strong>75 ₪</strong>, כולל משלוח.</p>
+        <div class="payment-qrs">
+          <a class="payment-qr" id="order-bit" target="_blank" rel="noopener">
+            <img id="order-bit-qr" alt="קוד QR לתשלום ב־Bit למעיין גלעד">
+            <span><strong>תשלום ב־Bit</strong><small>לחיצה או סריקה</small></span>
+          </a>
+          <a class="payment-qr" id="order-paybox" target="_blank" rel="noopener">
+            <img id="order-paybox-qr" alt="קוד QR לתשלום ב־PayBox למעיין גלעד">
+            <span><strong>תשלום ב־PayBox</strong><small>לחיצה או סריקה</small></span>
+          </a>
+        </div>
+        <a class="whatsapp-confirm" id="order-whatsapp" target="_blank" rel="noopener">שליחה חוזרת של פרטי ההזמנה בוואטסאפ ↗</a>
+      </section>
+    </div>
+  </dialog>
+
   <footer>
     <a class="brand footer-brand" href="#top"><span class="brand-mark">מג</span><span>מעיין גלעד</span></a>
     <p>© <span id="year"></span> מעיין גלעד. כל הזכויות שמורות.</p>
