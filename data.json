@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T17:42:43.845Z",
+  "updatedAt": "2026-07-25T05:59:11.223Z",
   "directSales": {
     "price": 50,
     "shipping": 25,
@@ -35,7 +35,7 @@
         "digital": [
           {
             "store": "עברית",
-            "price": 25,
+            "price": 24,
             "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
           },
           {
@@ -79,7 +79,7 @@
         "audio": [
           {
             "store": "עברית",
-            "price": 35,
+            "price": 24,
             "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
           },
           {
@@ -107,7 +107,7 @@
         "digital": [
           {
             "store": "עברית",
-            "price": 25,
+            "price": 24,
             "url": "https://www.e-vrit.co.il/product/38170/לא-אוותר-לעולם"
           },
           {
@@ -129,7 +129,7 @@
         "print": [
           {
             "store": "עברית",
-            "price": 68.6,
+            "price": 55,
             "url": "https://www.e-vrit.co.il/product/38170/לא-אוותר-לעולם"
           },
           {
