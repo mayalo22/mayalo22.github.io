@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T06:25:43.756Z",
+  "updatedAt": "2026-08-03T06:39:07.137Z",
   "directSales": {
     "price": 50,
     "shipping": 25,
@@ -35,12 +35,12 @@
         "digital": [
           {
             "store": "עברית",
-            "price": 24,
+            "price": 27,
             "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
           },
           {
             "store": "ביבוקס",
-            "price": 20,
+            "price": 29,
             "url": "https://bbooks.co.il/book/כוכבים-רואים-רק-בחושך"
           },
           {
@@ -57,12 +57,12 @@
         "print": [
           {
             "store": "עברית",
-            "price": 55,
+            "price": 68.6,
             "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
           },
           {
             "store": "ביבוקס",
-            "price": 44,
+            "price": 49,
             "url": "https://bbooks.co.il/book/כוכבים-רואים-רק-בחושך"
           },
           {
@@ -79,7 +79,7 @@
         "audio": [
           {
             "store": "עברית",
-            "price": 24,
+            "price": 27,
             "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
           },
           {
@@ -107,7 +107,7 @@
         "digital": [
           {
             "store": "עברית",
-            "price": 24,
+            "price": 27,
             "url": "https://www.e-vrit.co.il/product/38170/לא-אוותר-לעולם"
           },
           {
@@ -129,12 +129,12 @@
         "print": [
           {
             "store": "עברית",
-            "price": 55,
+            "price": 68.6,
             "url": "https://www.e-vrit.co.il/product/38170/לא-אוותר-לעולם"
           },
           {
             "store": "ביבוקס",
-            "price": 44,
+            "price": 49,
             "url": "https://bbooks.co.il/book/לא-אוותר-לעולם"
           },
           {
@@ -179,7 +179,7 @@
         "digital": [
           {
             "store": "עברית",
-            "price": 24,
+            "price": 28,
             "url": "https://www.e-vrit.co.il/product/36953/ילדה-שקופה"
           },
           {
