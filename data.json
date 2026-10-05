@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T10:13:41.522Z",
+  "updatedAt": "2026-10-05T10:33:39.523Z",
   "directSales": {
     "price": 50,
     "shipping": 25,
@@ -35,7 +35,7 @@
         "digital": [
           {
             "store": "עברית",
-            "price": 25,
+            "price": 35,
             "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
           },
           {
@@ -72,7 +72,7 @@
           },
           {
             "store": "צומת ספרים",
-            "price": 98,
+            "price": 1,
             "url": "https://www.booknet.co.il/מוצרים/כוכבים-רואים-רק-בחושך-160100000079"
           }
         ],
@@ -107,7 +107,7 @@
         "digital": [
           {
             "store": "עברית",
-            "price": 25,
+            "price": 35,
             "url": "https://www.e-vrit.co.il/product/38170/לא-אוותר-לעולם"
           },
           {
@@ -179,7 +179,7 @@
         "digital": [
           {
             "store": "עברית",
-            "price": 27,
+            "price": 28,
             "url": "https://www.e-vrit.co.il/product/36953/ילדה-שקופה"
           },
           {
