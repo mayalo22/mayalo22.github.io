@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T08:37:18.231Z",
+  "updatedAt": "2026-10-26T09:02:29.541Z",
   "directSales": {
     "price": 50,
     "shipping": 25,
@@ -40,7 +40,7 @@
           },
           {
             "store": "ביבוקס",
-            "price": 22,
+            "price": 24,
             "url": "https://bbooks.co.il/book/כוכבים-רואים-רק-בחושך"
           },
           {
@@ -72,7 +72,7 @@
           },
           {
             "store": "צומת ספרים",
-            "price": 109,
+            "price": 98,
             "url": "https://www.booknet.co.il/מוצרים/כוכבים-רואים-רק-בחושך-160100000079"
           }
         ],
@@ -112,7 +112,7 @@
           },
           {
             "store": "ביבוקס",
-            "price": 22,
+            "price": 24,
             "url": "https://bbooks.co.il/book/לא-אוותר-לעולם"
           },
           {
