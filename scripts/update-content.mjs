@@ -69,6 +69,7 @@ function extractPrice(html, title, format, mode) {
   const found = numbers(section);
   if (!found.length) return null;
   if (mode === "bbooks") return found.length > 1 ? found[1] : found[0];
+  if (mode === "booknet") return Math.min(...found);
   return found[0];
 }
 
@@ -78,14 +79,20 @@ const sources = {
     bbooks: "https://bbooks.co.il/book/כוכבים-רואים-רק-בחושך",
     indiebook: "https://indiebook.co.il/shop/כוכבים-רואים-רק-בחושך",
     steimatzky: "https://www.steimatzky.co.il/012010569",
-    booknet: "https://www.booknet.co.il/מוצרים/כוכבים-רואים-רק-בחושך-160100000079"
+    booknet: "https://www.booknet.co.il/מחברים/מעיין-גלעד"
+  },
+  shining: {
+    evrit: "https://www.e-vrit.co.il/product/41758/הכוכבים-2-הכוכב-הזוהר-שלי",
+    bbooks: "https://bbooks.co.il/book/הכוכב-הזוהר-שלי",
+    indiebook: "https://indiebook.co.il/shop/הכוכב-הזוהר-שלי",
+    steimatzky: "https://www.steimatzky.co.il/catalog/product/view/id/115295/s/600012923/category/178/",
+    booknet: "https://www.booknet.co.il/מחברים/מעיין-גלעד"
   },
   never: {
     evrit: "https://www.e-vrit.co.il/product/38170/x",
     bbooks: "https://bbooks.co.il/book/לא-אוותר-לעולם",
-    indiebook: "https://indiebook.co.il/shop/לא-אוותר-לעולם",
-    steimatzky: "https://www.steimatzky.co.il/012010524",
-    booknet: "https://www.booknet.co.il/מוצרים/לא-אוותר-לעולם-160100000073"
+    indiebook: "https://indiebook.co.il/shop/לא-אוותר-לעולם-עותק",
+    steimatzky: "https://www.steimatzky.co.il/012010524"
   },
   transparent: {
     evrit: "https://www.e-vrit.co.il/product/36953/x",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T11:05:48.646Z",
+  "updatedAt": "2026-11-14T13:57:59.841Z",
   "directSales": {
     "price": 50,
     "shipping": 25,
@@ -10,7 +10,16 @@
     "payboxQr": "assets/payment-paybox.png",
     "payboxUrl": "https://flowto.it/ey0ypKSZdG",
     "whatsappNumber": "972502410393",
-    "orderEmail": "mayalo22@gmail.com"
+    "orderEmail": "mayalo22@gmail.com",
+    "launchPackages": [
+      {
+        "id": "limited-launch-package",
+        "title": "מארז ההשקה המצומצמת",
+        "price": 75,
+        "cover": "assets/shining-star.jpg",
+        "description": "מארז השקה במהדורה מצומצמת"
+      }
+    ]
   },
   "books": [
     {
@@ -72,20 +81,82 @@
           },
           {
             "store": "צומת ספרים",
-            "price": 98,
+            "price": 50,
             "url": "https://www.booknet.co.il/מוצרים/כוכבים-רואים-רק-בחושך-160100000079"
           }
         ],
         "audio": [
           {
             "store": "עברית",
-            "price": 25,
+            "price": 23,
             "url": "https://www.e-vrit.co.il/product/39908/הכוכבים-1-כוכבים-רואים-רק-בחושך"
           },
           {
             "store": "ביבוקס",
             "price": 29,
             "url": "https://bbooks.co.il/book/כוכבים-רואים-רק-בחושך"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shining",
+      "title": "הכוכב הזוהר שלי",
+      "kicker": "סדרת הכוכבים · ספר שני · עומד בפני עצמו",
+      "cover": "assets/shining-star.jpg",
+      "description": "סנדי עובדת במעבדת פוריות ועוזרת לאחרים להגשים חלומות, בזמן שהביטחון העצמי שלה הולך ונעלם. זוהר רגיל להשיג כל דבר שהוא רוצה — עד שסנדי נכנסת לחייו ומאלצת את שניהם לראות את עצמם, ואת האהבה, בדרך חדשה.",
+      "tags": [
+        "מסטוץ לאהבה",
+        "דימוי גוף",
+        "הפכים נמשכים",
+        "רומנטיקה עכשווית"
+      ],
+      "extras": [],
+      "prices": {
+        "digital": [
+          {
+            "store": "עברית",
+            "price": 29,
+            "url": "https://www.e-vrit.co.il/product/41758/הכוכבים-2-הכוכב-הזוהר-שלי"
+          },
+          {
+            "store": "ביבוקס",
+            "price": 29,
+            "url": "https://bbooks.co.il/book/הכוכב-הזוהר-שלי"
+          },
+          {
+            "store": "אינדיבוק",
+            "price": 29,
+            "url": "https://indiebook.co.il/shop/הכוכב-הזוהר-שלי"
+          },
+          {
+            "store": "סטימצקי",
+            "price": 29,
+            "url": "https://www.steimatzky.co.il/catalog/product/view/id/115295/s/600012923/category/178/"
+          }
+        ],
+        "print": [
+          {
+            "store": "עברית",
+            "price": 55,
+            "url": "https://www.e-vrit.co.il/product/41758/הכוכבים-2-הכוכב-הזוהר-שלי"
+          },
+          {
+            "store": "ביבוקס",
+            "price": 55,
+            "url": "https://bbooks.co.il/book/הכוכב-הזוהר-שלי"
+          },
+          {
+            "store": "צומת ספרים",
+            "price": 50,
+            "url": "https://www.booknet.co.il/מוצרים/הכוכב-הזוהר-שלי-160100000147"
+          }
+        ],
+        "audio": [
+          {
+            "store": "עברית",
+            "price": 23,
+            "url": "https://www.e-vrit.co.il/product/41758/הכוכבים-2-הכוכב-הזוהר-שלי"
           }
         ]
       }
@@ -117,8 +188,8 @@
           },
           {
             "store": "אינדיבוק",
-            "price": 35,
-            "url": "https://indiebook.co.il/shop/לא-אוותר-לעולם"
+            "price": 22,
+            "url": "https://indiebook.co.il/shop/לא-אוותר-לעולם-עותק"
           },
           {
             "store": "סטימצקי",
@@ -144,8 +215,8 @@
           },
           {
             "store": "צומת ספרים",
-            "price": 98,
-            "url": "https://www.booknet.co.il/מוצרים/לא-אוותר-לעולם-160100000073"
+            "price": 109,
+            "url": "https://www.booknet.co.il/מוצרים/לא-אוותר-לעולם-מהדורה-חדשה-160100000123"
           }
         ],
         "audio": [
